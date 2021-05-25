@@ -1,0 +1,8 @@
+version: "3" # composeファイルフォーマットのバージョン
+services:
+  golang-app: # サービス名
+    build: . # ビルドに使用するDockerfile
+    tty: true # コンテナの起動を永続化する
+    volumes:
+      - .:/go/src/app # マウントディレクトリ指定
+    command: bash -c "realize start --server"

@@ -1,0 +1,23 @@
+settings:
+  legacy:
+    force: false
+    interval: 0s
+server:
+  status: true
+  open: false
+  port: 5002
+  host: localhost
+schema:
+- name: app
+  path: app
+  commands: {}
+  watcher:
+    extensions:
+    - go
+    - yaml
+    paths:
+    - /
+    ignored_paths:
+    - .git
+    - .realize
+    - vendor
